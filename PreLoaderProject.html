@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader with Styled Text</title>
+    <style>
+        /* Style for the preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 1s ease; /* Adding transition for fade-out effect */
+        }
+
+        /* Spinner animation */
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Keyframes for spinner animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Hide the main content initially */
+        #content {
+            display: none;
+            padding: 20px; /* Add some padding for the content */
+            text-align: center; /* Center the text */
+        }
+
+        /* Class to hide preloader */
+        .hide-preloader {
+            opacity: 0; /* Set opacity to 0 for fade-out effect */
+            pointer-events: none; /* Disable interaction */
+        }
+
+        /* Style for the main heading */
+        h1 {
+            color: #333; /* Text color */
+            font-size: 2.5em; /* Font size */
+            font-family: 'Arial', sans-serif; /* Font family */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        /* Style for secondary headings */
+        h2 {
+            color: #007BFF; /* Blue color for secondary headings */
+            font-size: 1.8em;
+            font-family: 'Arial', sans-serif;
+            margin-top: 30px; /* Space above the heading */
+            margin-bottom: 10px; /* Space below the heading */
+        }
+
+        /* Style for paragraph text */
+        p {
+            color: #555; /* Gray color for paragraph text */
+            font-size: 1.2em;
+            line-height: 1.6em;
+            font-family: 'Tahoma', sans-serif;
+            max-width: 700px;
+            margin: 0 auto; /* Center the paragraph */
+            padding: 10px; /* Add padding inside the paragraph */
+        }
+
+        /* Example of styling for a specific paragraph */
+        .highlight {
+            background-color: #f0f8ff; /* Light blue background */
+            border-left: 4px solid #007BFF; /* Blue left border */
+            padding-left: 10px; /* Padding inside the paragraph */
+            font-weight: bold; /* Make the text bold */
+        }
+    </style>
+</head>
+<body background="Jowhareh_galleries_9_poster_d7cc2669-c468-45f6-97ad-4b16e80891d4.jpeg">
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content">
+        <h1>به صفحه ما خوش آمدید!</h1>
+        <p>این یک صفحه نمونه با preloader است که به صورت پویا هنگام بارگذاری کامل صفحه، محتوای آن نمایش داده می‌شود.</p>
+
+        <!-- Additional Content -->
+        <h2>درباره ما</h2>
+        <p>ما در اینجا برای ارائه بهترین خدمات و محتوای با کیفیت به کاربران خود تلاش می‌کنیم. صفحه ما طراحی شده تا تجربه‌ای بی‌نظیر از کار با وب را برای شما به ارمغان بیاورد.</p>
+
+        <h2>خدمات ما</h2>
+        <p class="highlight">خدمات ما شامل طراحی وب، توسعه نرم‌افزار و مشاوره فناوری اطلاعات است. ما با تیمی مجرب آماده ارائه راهکارهای نوآورانه و به‌روز به شما هستیم.</p>
+
+        <h2>تماس با ما</h2>
+        <p>اگر سوالی دارید یا نیاز به اطلاعات بیشتری دارید، لطفاً با ما تماس بگیرید. ما خوشحال می‌شویم که به شما کمک کنیم.</p>
+    </div>
+
+    <script src="preLoaderProject.js"></script>
+</body>
+</html>
